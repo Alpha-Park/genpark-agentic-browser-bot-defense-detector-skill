@@ -1,0 +1,39 @@
+{
+  "name": "genpark-agentic-browser-bot-defense-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Browser bot defense detector identifying Cloudflare, DataDome, and CAPTCHA challenges with backoff recommendations.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "web-agent",
+  "tags": [
+    "browserbase",
+    "bot-defense",
+    "cloudflare-turnstile",
+    "datadome",
+    "stealth-browser"
+  ],
+  "inputs": {
+    "page_html_snippet": {
+      "type": "string"
+    },
+    "http_status_code": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "inspection_id": {
+      "type": "string"
+    },
+    "bot_defense_detected": {
+      "type": "boolean"
+    },
+    "challenge_provider": {
+      "type": "string"
+    },
+    "inspection_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
